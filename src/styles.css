@@ -1,57 +1,271 @@
-/* Imported Font */
+/* IMPORTED FONT */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-    font-family: "Montserrat", serif;
+/* COLOR VARIABLES */
+:root {
+    --white: #fdfdfd;
+    --black: #141218;
 }
 
-/* CSS Reset */
+/* CSS RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Nav Style Rules */
-nav {
-    height: 10vh;
-    margin: 0 20px;
+/* WHOLE PAGE STYLE RULES */
+html {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav img {
-    width: 150px;
-}
-
-nav ul {
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-}
-
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-/* Main Style Rules */
-main {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-main > h1 {
-    margin-bottom: 10px;
+body {
+    margin: 20px;
+    max-width: 1600px;
+    
+    font-family: "Montserrat", serif;
+    background-color: var(--white);
+    color: var(--black);
 }
 
-main > p {
-    margin-bottom: 5px;
+a { 
+    text-decoration: none;
+    color: var(--black);
+}
+
+.opposite {
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.opposite a {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+main {
+    margin: 30px 0;
+}
+
+/* PHOTO CARD STYLE RULES */
+/* Photo Card Image Style Rules */
+.photo-card img {     
+    border-bottom: solid 3px var(--white);
+}
+
+/* PROJECT STYLE RULES */
+.project img {
+    max-width: 100%;
+    border: solid 3px var(--white);
+}
+
+.project p {
+    margin: 20px 0;
+}
+
+.project a {
+    display: block;
+}
+
+/* MOBILE VIEWPORT STYLE RULES */
+
+@media (max-width: 767px) {
+    /* HIDE TABLET & DESKTOP NAV */
+    .tab-desk-nav {
+        display: none;
+    }
+
+    /* NAV STYLE RULES */
+    #displayed {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Left Side: Logo */
+    .mobile-nav a img {
+        width: 50%;
+    }
+
+    /* Right Side: Menu Icon */
+    #displayed a.icon {
+        font-size: 2rem;
+    }
+    
+    /* Hide Links */
+    .mobile-nav #mobile-links {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* Display Links */
+    .mobile-nav #mobile-links.show {
+        max-height: 500px;
+        opacity: 1;
+    }
+    
+    /* Menu Links Style Rules */
+    #mobile-links a {
+        padding: 14px 16px;
+        font-size: 1.25rem;
+        font-weight: 600;
+        display: block;
+    }
+
+    /* FOOTER STYLE RULES */
+    /* Credits */
+    #credits {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Credits Logo */
+    #credits a img {
+        width: 60%;
+    }
+
+    /* Credits Text */
+    #credits p {
+        text-align: right;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    /* Back to top */
+    footer a.opposite {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    /* PHOTO CARD STYLE RULES */
+    .photo-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Photo Card Text Style Rules */
+    .photo-card .text {
+        margin-bottom: 20px;
+    }
+
+    /* Photo Card Image Style Rules */
+    .photo-card img {     
+        max-width: 350px;
+    }
+}
+
+/* TABLET & DESKTOP VIEWPORT STYLE RULES */
+@media (min-width: 768px) {
+    /* HIDE MOBILE NAV */
+    .mobile-nav {
+        display: none;
+    }
+
+    /* NAV STYLE RULES */
+    .tab-desk-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Left Side: Logo */
+    .tab-desk-nav a img {
+        width: 60%;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Right Side: Links */
+    #tab-desk-links a {
+        margin-left: 30px;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    /* FOOTER STYLE RULES */
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* Credits */
+    #credits {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* Credits Logo */
+    #credits a img {
+        width: 60%;
+    }
+
+    /* Credits Text */
+    #credits p {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    /* Back to top */
+    #back-to-top {
+        display: flex;
+        align-items: center;
+    }
+
+    footer a.opposite {
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    /* PHOTO CARD STYLE RULES */
+    .photo-card {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Photo Card Image Style Rules */
+    .photo-card img {     
+        max-width: 400px;
+    }
+}
+
+/* DESKTOP VIEWPORT STYLE RULES */
+@media (min-width: 1024px) {
+    /* PHOTO CARD STYLE RULES */
+    /* Photo Card Image Style Rules */
+    .photo-card img {     
+        max-width: 500px;
+    }
+}
+
+/* DARK MODE STYLE RULES */
+body.dark-mode, body.dark-mode a {
+    background-color: var(--black);
+    color: var(--white);
+    
+}
+
+body.dark-mode .opposite {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body.dark-mode .opposite a {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body.dark-mode .photo-card img, body.dark-mode .project img{
+    border-color: var(--black);
 }

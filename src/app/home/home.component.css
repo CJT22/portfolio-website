@@ -1,0 +1,62 @@
+/* PHOTO CARD STYLE RULES */
+/* Photo Card Text Style Rules */
+.photo-card .text h3 {
+    margin: 10px 0;
+}
+
+/* GET STARTED STYLE RULES */
+.get-started {
+    margin: 30px 0;
+}
+
+/* Get started links style rules */
+.get-started a {
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* FEATURED PROJECTS STYLE RULES */
+.project, .project h3 {
+    margin-top: 20px;
+}
+
+
+/* MOBILE VIEWPORT STYLE RULES */
+@media (max-width: 767px) {
+    /* GET STARTED STYLE RULES */
+    /* Get started links style rules */
+    .get-started a {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+/* TABLET & DESKTOP VIEWPORT STYLE RULES */
+@media (min-width: 768px) {
+    /* FEATURED PROJECTS LAYOUT */
+    .featured-projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* GET STARTED LAYOUT */
+    .get-started {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        gap: 20px;
+    }
+
+    .get-started h2 {
+        grid-column: span 2;
+    }
+
+    .get-started a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+}

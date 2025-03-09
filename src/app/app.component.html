@@ -1,11 +1,65 @@
-<nav>
-  <a routerLink="/"><img src="logo-black.png" alt="CJTayag Logo"></a>
+<!-- <nav>
+  <a routerLink="/"><img src="wordmark-black.svg" alt="CJTayag Logo"></a>
   <ul>
       <li><a routerLink="/">Home</a></li>
       <li><a routerLink="/about">About</a></li>
       <li><a routerLink="/projects">Projects</a></li>
       <li><a routerLink="/contact">Contact</a></li>
   </ul>
+</nav> -->
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav">
+  <!-- Initial Display -->
+  <div id="displayed">
+    <a routerLink="/" class="active"><img [src]="wordmarkPath" alt="CJTayag Logo"></a>
+
+    <!-- Hamburger Menu -->
+    <a href="javascript:void(0);" class="icon" (click)="toggleMenu()">
+      <i class="ri-menu-line"></i>
+    </a>
+  </div>
+
+  <!-- Navigation Links -->
+  <div id="mobile-links" [ngClass]="{'show': menuOpen}">
+    <a routerLink="/"><i class="ri-home-2-fill"></i> Home</a>
+    <hr>
+    <a routerLink="/about"><i class="ri-user-3-fill"></i> About</a>
+    <hr>
+    <a routerLink="/projects"><i class="ri-pages-line"></i> Projects</a>
+    <hr>
+    <a routerLink="/contact"><i class="ri-mail-line"></i> Contact</a>
+    <hr>
+    <a href="cjtayag-creative-resume.pdf" download><i class="ri-file-download-line"></i> Resume</a>
+    <hr>
+    <a href="javascript:void(0);" (click)="toggleDarkMode()"><i [class]="modeIcon"></i> {{ darkMode ? 'Light Mode' : 'Dark Mode' }}</a>
+    <hr>
+  </div>
+</nav>
+
+<!-- Tablet and Desktop Navigation -->
+<nav class="tab-desk-nav">
+  <a routerLink="/" class="active"><img [src]="wordmarkPath" alt="CJTayag Logo"></a>
+
+  <div id="tab-desk-links">
+    <a routerLink="/">Home</a>
+    <a routerLink="/about">About</a>
+    <a routerLink="/projects">Projects</a>
+    <a routerLink="/contact">Contact</a>
+    <a href="cjtayag-creative-resume.pdf" download>Resume</a>
+    <a href="javascript:void(0);" (click)="toggleDarkMode()"><i [class]="modeIcon" ></i></a>
+  </div>
 </nav>
 
 <router-outlet />
+
+<footer>
+  <div id="credits">
+    <a routerLink="/" class="active"><img [src]="lettermarkPath" alt="CJT Logo" loading="lazy"></a>
+    <p>Created by Chester Jonathan Tayag, 2025</p>
+  </div>
+
+  <div id="back-to-top">
+    <a href="javascript:void(0);" class="opposite" (click)="backToTop()">Back to top</a>
+  </div>
+</footer>

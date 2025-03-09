@@ -1,0 +1,121 @@
+/* PHOTO CARD STYLE RULES */
+/* Photo Card Text Style Rules */
+.photo-card .text p {
+    margin-top: 10px;
+    /* max-width: 1000px; */
+}
+
+/* ICONS STYLE RULES */
+.can-do-info i, .skills ul li i, .interest-card i {
+    font-size: 2rem;
+}
+
+/* "WHAT CAN I DO" & INTERESTS STYLE RULES */
+.all-can-do, .all-interests {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* "WHAT CAN I DO?" STYLE RULES */
+.can-do {
+    margin-top: 30px;
+}
+
+.can-do h2 {
+    margin-bottom: 20px;
+}
+
+.can-do-info {  
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* SKILLS STYLES RULES */
+.skills {
+    margin-top: 30px;
+}
+
+.skills h2 {
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style-type: none;
+}
+
+.skills ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills ul li p {
+    font-weight: 600;
+}
+
+/* INTERESTS STYLE RULES */
+.interests {
+    margin-top: 30px;
+}
+
+.interests > p {
+    margin: 10px 0;
+}
+
+.interest-card h3 {
+    margin: 10px 0;
+}
+
+/* MOBILE VIEWPORT STYLE RULES */
+@media (max-width: 767px) {
+    /* "WHAT CAN I DO?" STYLE RULES */
+    
+
+    /* SKILLS STYLES RULES */
+    .skills ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* TABLET VIEWPORT STYLE RULES */
+@media (min-width: 768px) {
+    /* SKILLS STYLES RULES */
+    .skills ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* DESKTOP VIEWPORT STYLE RULES */
+@media (min-width: 1024px) {
+    /* "WHAT CAN I DO?" & INTERESTS STYLE RULES */
+    .all-can-do, .all-interests {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* SKILLS STYLE RULES */
+    .all-skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+
+    .skills h2 {
+        text-align: center;
+    }
+
+    .skills ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}

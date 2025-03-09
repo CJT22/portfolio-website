@@ -1,0 +1,82 @@
+/* PROJECTS & CERTIFICATIONS STYLE RULES */
+.all-projects > a, .all-certifs > a {
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* CERTIFICATIONS & TESTIMONIALS STYLE RULES */
+.certifications, .testimonials {
+    margin-top: 30px;
+}
+
+.certifications h2, .testimonials h2 {
+    margin-bottom: 20px;
+}
+
+/* PROJECTS STYLE RULES */
+h1, .project h2 {
+    margin-bottom: 20px;
+}
+
+/* CERTIFICATIONS STYLE RULES */
+.certif-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.certif-card img {
+    max-width: 250px;
+}
+
+.certif-card h3, .certif-card p, .certif-card a {
+    margin-top: 10px;
+}
+
+.certif-card a {
+    text-decoration: underline;
+}
+
+/* TESTIMONIALS STYLE RULES */
+.quote {
+    margin-bottom: 20px;
+}
+
+.quote, .quotee-name {
+    font-weight: 600;
+}
+
+/* MOBILE VIEWPORT LAYOUT RULES */
+@media (max-width: 767px) {
+    /* PROJECTS, CERTIFICATIONS, & TESTIMONIALS LAYOUT */
+    .all-projects, .all-certifs, .all-testimonials {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* CERTIFICATIONS LAYOUT ADJUSTMENT */
+    .all-certifs {
+        gap: 50px;
+    }
+}
+
+/* TABLET VIEWPORT LAYOUT RULES  */
+@media (min-width: 768px) {
+    .all-projects, .all-certifs, .all-testimonials {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* DESKTOP VIEWPORT LAYOUT RULES */
+@media (min-width: 1600px) {
+    .all-projects, .all-certifs {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,61 @@
+/* WHOLE PAGE LAYOUT RULES */
+main {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+/* CONTACT INFO STYLE RULES */
+.contact-number {
+    margin: 20px 0;
+}
+
+.contact-info i {
+    font-size: 15rem;
+}
+
+/* SOCIAL MEDIAS STYLE RULES */
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.soc-med-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.soc-med-links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soc-med-links a i {
+    font-size: 2rem;
+}
+
+.soc-med-links p {
+    font-weight: 600;
+}
+
+/* MOBILE VIEWPORT LAYOUT RULES */
+@media (max-width: 767px) {
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* TABLET VIEWPORT LAYOUT RULES */
+@media (min-width: 768px) {
+    .contact-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
