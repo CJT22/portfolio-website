@@ -52,7 +52,8 @@ main {
 
 /* PHOTO CARD STYLE RULES */
 /* Photo Card Image Style Rules */
-.photo-card img {     
+.photo-card img {
+    width: 100%;
     border-bottom: solid 3px var(--white);
 }
 
