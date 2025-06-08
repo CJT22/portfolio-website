@@ -6,7 +6,7 @@
 
 /* GET STARTED STYLE RULES */
 .get-started {
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 /* Get started links style rules */
@@ -19,7 +19,7 @@
 
 /* FEATURED PROJECTS STYLE RULES */
 .project, .project h3 {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 
@@ -29,25 +29,18 @@
     /* Get started links style rules */
     .get-started a {
         display: block;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 }
 
 /* TABLET & DESKTOP VIEWPORT STYLE RULES */
 @media (min-width: 768px) {
-    /* FEATURED PROJECTS LAYOUT */
-    .featured-projects {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
     /* GET STARTED LAYOUT */
     .get-started {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 1fr 1fr;
-        gap: 20px;
+        gap: 30px;
     }
 
     .get-started h2 {
@@ -59,4 +52,11 @@
         justify-content: center;
         align-items: center;
     } 
+
+    /* FEATURED PROJECTS LAYOUT */
+    .featured-projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
 }

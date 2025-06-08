@@ -14,12 +14,12 @@
 .all-can-do, .all-interests {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 /* "WHAT CAN I DO?" STYLE RULES */
 .can-do {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .can-do h2 {
@@ -29,12 +29,12 @@
 .can-do-info {  
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 /* SKILLS STYLES RULES */
 .skills {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .skills h2 {
@@ -48,8 +48,10 @@
 .skills ul li {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
+    text-align: center;
 }
 
 .skills ul li p {
@@ -58,11 +60,11 @@
 
 /* INTERESTS STYLE RULES */
 .interests {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .interests > p {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .interest-card h3 {
@@ -71,14 +73,11 @@
 
 /* MOBILE VIEWPORT STYLE RULES */
 @media (max-width: 767px) {
-    /* "WHAT CAN I DO?" STYLE RULES */
-    
-
     /* SKILLS STYLES RULES */
     .skills ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 30px;
     }
 }
 
@@ -88,7 +87,7 @@
     .skills ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        gap: 30px;
     }
 }
 
@@ -98,7 +97,7 @@
     .all-can-do, .all-interests {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        gap: 30px;
     }
 
     /* SKILLS STYLE RULES */
@@ -106,7 +105,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        gap: 20px;
+        gap: 30px;
     }
 
     .skills h2 {
@@ -116,6 +115,6 @@
     .skills ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 30px;
     }
 }
